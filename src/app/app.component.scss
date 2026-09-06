@@ -1,0 +1,124 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+* { box-sizing: border-box; }
+
+.page-shell {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.hero {
+  background: linear-gradient(135deg, #123b67, #087f8c);
+  color: #fff;
+  padding: 42px 24px 72px;
+}
+
+.hero-content {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255,255,255,.16);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.eyebrow { margin: 0 0 6px; font-size: 12px; letter-spacing: 2px; opacity: .8; font-weight: 700; }
+h1 { margin: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; }
+.subtitle { margin: 10px 0 0; opacity: .88; }
+
+.container {
+  max-width: 1180px;
+  margin: -38px auto 0;
+  padding: 0 20px 50px;
+}
+
+.search-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(17, 36, 65, .12);
+}
+
+.search-box { position: relative; display: flex; align-items: center; }
+.search-icon { position: absolute; left: 17px; font-size: 28px; color: #728096; transform: rotate(-20deg); }
+.search-box input {
+  width: 100%;
+  height: 58px;
+  border: 1px solid #dce3ed;
+  border-radius: 13px;
+  outline: none;
+  padding: 0 50px 0 52px;
+  font-size: 16px;
+  color: #172033;
+  transition: .2s;
+}
+.search-box input:focus { border-color: #087f8c; box-shadow: 0 0 0 4px rgba(8,127,140,.1); }
+.clear-btn { position: absolute; right: 12px; border: 0; background: transparent; font-size: 26px; color: #7c8797; cursor: pointer; }
+
+.filters { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; margin-top: 12px; }
+select, .reset-btn {
+  height: 46px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #263248;
+}
+.reset-btn { cursor: pointer; background: #123b67; color: #fff; border-color: #123b67; padding: 0 22px; font-weight: 700; }
+.reset-btn:hover { opacity: .9; }
+
+.result-bar { display: flex; justify-content: space-between; align-items: center; padding: 25px 3px 15px; color: #667085; font-size: 14px; }
+.result-bar strong { color: #123b67; font-size: 20px; }
+.hint { font-size: 12px; }
+
+.doctor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.doctor-card {
+  background: #fff;
+  border: 1px solid #e4e9f1;
+  border-radius: 16px;
+  padding: 19px;
+  transition: transform .2s, box-shadow .2s;
+}
+.doctor-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(17,36,65,.09); }
+.card-top { display: flex; gap: 13px; align-items: center; }
+.avatar { width: 48px; height: 48px; flex: 0 0 48px; display: grid; place-items: center; border-radius: 50%; background: #e6f5f6; color: #087f8c; font-weight: 800; }
+.doctor-title { min-width: 0; }
+.doctor-title h2 { margin: 0 0 5px; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.department { color: #087f8c; font-size: 13px; font-weight: 700; }
+.details { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.detail { padding: 11px 12px; border-radius: 10px; background: #f7f9fc; min-width: 0; }
+.detail.full { grid-column: 1 / -1; }
+.label { display: block; color: #8a94a6; font-size: 10px; font-weight: 800; letter-spacing: .8px; margin-bottom: 5px; }
+.value { display: block; font-size: 14px; font-weight: 650; overflow-wrap: anywhere; }
+
+.empty-state { background: #fff; border-radius: 16px; padding: 65px 20px; text-align: center; border: 1px solid #e4e9f1; }
+.empty-icon { font-size: 42px; color: #8a94a6; transform: rotate(-20deg); }
+.empty-state h2 { margin: 10px 0 5px; }
+.empty-state p { color: #667085; margin: 0 0 18px; }
+
+@media (max-width: 800px) {
+  .doctor-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 30px 18px 65px; }
+  .container { padding: 0 12px 35px; }
+  .filters { grid-template-columns: 1fr; }
+  .result-bar { align-items: flex-start; gap: 5px; flex-direction: column; }
+  .doctor-title h2 { white-space: normal; }
+}

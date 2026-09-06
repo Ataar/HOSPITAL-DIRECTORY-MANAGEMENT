@@ -1,0 +1,80 @@
+<div class="page-shell">
+  <header class="hero">
+    <div class="hero-content">
+      <div class="brand-icon">✚</div>
+      <div>
+        <p class="eyebrow">HOSPITAL DIRECTORY</p>
+        <h1>Doctor & Department Search</h1>
+        <p class="subtitle">Find doctors by name, department, floor or room number.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-card">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          placeholder="Search doctor, department, floor, room no..."
+          aria-label="Search doctors"
+        />
+        <button *ngIf="searchText" type="button" class="clear-btn" (click)="clearSearch()">×</button>
+      </div>
+
+      <div class="filters">
+        <select [(ngModel)]="selectedFloor" aria-label="Filter by floor">
+          <option *ngFor="let floor of floors" [value]="floor">{{ floor }}</option>
+        </select>
+
+        <select [(ngModel)]="selectedDepartment" aria-label="Filter by department">
+          <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
+        </select>
+
+        <button type="button" class="reset-btn" (click)="clearSearch()">Reset</button>
+      </div>
+    </section>
+
+    <div class="result-bar">
+      <div><strong>{{ filteredDoctors.length }}</strong> doctor{{ filteredDoctors.length === 1 ? '' : 's' }} found</div>
+      <div class="hint">Search is applied to all details</div>
+    </div>
+
+    <section *ngIf="filteredDoctors.length; else noResults" class="doctor-grid">
+      <article class="doctor-card" *ngFor="let doctor of filteredDoctors">
+        <div class="card-top">
+          <div class="avatar">Dr</div>
+          <div class="doctor-title">
+            <h2>{{ doctor.doctorName }}</h2>
+            <span class="department">{{ doctor.department }}</span>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span class="label">FLOOR</span>
+            <span class="value">{{ doctor.floor }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">ROOM NO.</span>
+            <span class="value">{{ doctor.roomNo || 'Not specified' }}</span>
+          </div>
+          <div class="detail full">
+            <span class="label">TIMINGS</span>
+            <span class="value">{{ doctor.timings || 'Not specified' }}</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <ng-template #noResults>
+      <section class="empty-state">
+        <div class="empty-icon">⌕</div>
+        <h2>No doctors found</h2>
+        <p>Try a different doctor name, department, floor or room number.</p>
+        <button type="button" class="reset-btn" (click)="clearSearch()">Show All Doctors</button>
+      </section>
+    </ng-template>
+  </main>
+</div>
