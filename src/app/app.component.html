@@ -1,7 +1,8 @@
 <div class="page-shell">
   <header class="hero">
     <div class="hero-content">
-      <div class="brand-icon">✚</div>
+      <!-- <div class="brand-icon">✚</div> -->
+       <img src="https://assets.kimshospitals.com/images/specialities/kims-kondapur-logo_1714479839.png" alt="">
       <div>
         <p class="eyebrow">HOSPITAL DIRECTORY</p>
         <h1>Doctor & Department Search</h1>
@@ -41,7 +42,7 @@
       <div class="hint">Search is applied to all details</div>
     </div>
 
-    <section *ngIf="filteredDoctors.length; else noResults" class="doctor-grid">
+    <!-- <section *ngIf="filteredDoctors.length; else noResults" class="doctor-grid">
       <article class="doctor-card" *ngFor="let doctor of filteredDoctors">
         <div class="card-top">
           <div class="avatar">Dr</div>
@@ -66,8 +67,111 @@
           </div>
         </div>
       </article>
-    </section>
+    </section> -->
 
+  <section *ngIf="filteredDoctors.length; else noResults" class="doctor-grid">
+  <article
+    class="doctor-card"
+    *ngFor="let doctor of filteredDoctors"
+    [class.special-card]="doctor.roomType === 'label'"
+    [class.empty-room-card]="doctor.roomType === 'empty'"
+  >
+
+    <!-- SPECIAL LABEL ROOM -->
+    <ng-container *ngIf="doctor.roomType === 'label'; else normalDoctor">
+
+      <div class="card-top special-room">
+        <div class="avatar">⌂</div>
+
+        <div class="doctor-title">
+          <h2>{{ doctor.label }}</h2>
+          <span class="department">ROOM {{ doctor.roomNo }}</span>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <span class="label">FLOOR</span>
+          <span class="value">{{ doctor.floor }}</span>
+        </div>
+
+        <div class="detail">
+          <span class="label">ROOM NO.</span>
+          <span class="value">{{ doctor.roomNo }}</span>
+        </div>
+      </div>
+
+    </ng-container>
+
+
+    <!-- NORMAL DOCTOR / EMPTY ROOM -->
+    <ng-template #normalDoctor>
+
+      <ng-container *ngIf="doctor.roomType !== 'empty'; else emptyRoom">
+
+        <div class="card-top">
+          <div class="avatar">Dr</div>
+
+          <div class="doctor-title">
+            <h2>{{ doctor.doctorName }}</h2>
+            <span class="department">{{ doctor.department }}</span>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span class="label">FLOOR</span>
+            <span class="value">{{ doctor.floor }}</span>
+          </div>
+
+          <div class="detail">
+            <span class="label">ROOM NO.</span>
+            <span class="value">
+              {{ doctor.roomNo || 'Not specified' }}
+            </span>
+          </div>
+
+          <div class="detail full">
+            <span class="label">TIMINGS</span>
+            <span class="value">
+              {{ doctor.timings || 'Not specified' }}
+            </span>
+          </div>
+        </div>
+
+      </ng-container>
+
+
+      <!-- EMPTY ROOM -->
+      <ng-template #emptyRoom>
+
+        <div class="card-top">
+          <div class="avatar">—</div>
+
+          <div class="doctor-title">
+            <h2>Empty Room</h2>
+            <span class="department">Available</span>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span class="label">FLOOR</span>
+            <span class="value">{{ doctor.floor }}</span>
+          </div>
+
+          <div class="detail">
+            <span class="label">ROOM NO.</span>
+            <span class="value">{{ doctor.roomNo }}</span>
+          </div>
+        </div>
+
+      </ng-template>
+
+    </ng-template>
+
+  </article>
+</section>
     <ng-template #noResults>
       <section class="empty-state">
         <div class="empty-icon">⌕</div>

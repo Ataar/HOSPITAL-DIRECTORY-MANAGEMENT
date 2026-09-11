@@ -5,7 +5,7 @@ export const DOCTORS: Doctor[] = [
   { sno: 2, doctorName: 'Dr. Manisha Reddy', department: 'Paediatric Surgeon', floor: '1st', roomNo: '150', timings: '12:00pm - 4:00pm' },
   { sno: 3, doctorName: 'Dr. Krishna Jayanth M', department: 'Paediatric Neonatology', floor: '1st', roomNo: '150', timings: '10:00am - 2:00pm' },
   { sno: 4, doctorName: 'Dr. Rajesh Khana', department: 'Paediatric', floor: '1st', roomNo: '149', timings: '4:00pm - 5:00pm' },
-  { sno: 5, doctorName: 'Dr. Anusha Allam', department: 'Paediatric', floor: '1st', roomNo: '148', timings: '9:00am - 5:00pm' },
+  { sno: 5, doctorName: 'Dr. Anusha Allam', department: 'Paediatric', floor: '1st', roomNo: '148', timings: '9:00am - 5:00pm' }, 
   { sno: 6, doctorName: 'Dr. Parag Dekate', department: 'Paediatric', floor: '1st', roomNo: '147', timings: '11:00am - 2:30pm' },
   { sno: 7, doctorName: 'Dr. Yoga Nagendhar M', department: 'Paediatric Surgeon', floor: '1st', roomNo: '127', timings: '10:00am - 1:00pm' },
   { sno: 8, doctorName: 'Dr. Pandu C', department: 'Paediatric', floor: '1st', roomNo: '134', timings: '10:00am - 2:00pm' },
@@ -31,21 +31,52 @@ export const DOCTORS: Doctor[] = [
   { sno: 28, doctorName: 'Dr. Harshitha P', department: 'Gynecologist', floor: '1st', roomNo: '109', timings: '9:00am - 5:00pm' },
   { sno: 29, doctorName: 'Dr. Deepa Ingale', department: 'Gynecologist', floor: '1st', roomNo: '110', timings: '9:00am - 5:00pm' },
 
-  { sno: 1, doctorName: 'Dr. Phani Raj', department: 'Neurosurgery', floor: '2nd', roomNo: '201', timings: '10:30am - 3:00pm' },
-  { sno: 2, doctorName: 'Dr. Savitri Sastri B V', department: 'Neurosurgery', floor: '2nd', roomNo: '202', timings: '9:30am - 3:00pm' },
-  { sno: 3, doctorName: 'Dr. Dheeraj Rai', department: 'Neurology', floor: '2nd', roomNo: '210', timings: '9:30am - 4:00pm' },
-  { sno: 4, doctorName: 'Dr. Abhinay M Hoche', department: 'Neurology', floor: '2nd', roomNo: '212', timings: '10:00am - 4:00pm' },
-  { sno: 5, doctorName: 'Dr. Manoj Vasireddy', department: 'Neurology', floor: '2nd', roomNo: '216', timings: '9:30am - 4:00pm' },
-  { sno: 6, doctorName: 'Dr. Surya Teja', department: 'Neurology', floor: '2nd', roomNo: '215', timings: '10:00am - 4:00pm' },
-  { sno: 7, doctorName: 'Dr. Spoorthy Kothepalli', department: 'Rheumatology', floor: '2nd', roomNo: '218', timings: '11:00am - 4:00pm' },
-  { sno: 8, doctorName: 'Dr. Harsha Vikram', department: 'Orthopaedics', floor: '2nd', roomNo: '203', timings: '11:00am - 4:00pm' },
-  { sno: 9, doctorName: 'Dr. Sri Krishna Chaitanya', department: 'Orthopaedics', floor: '2nd', roomNo: '204', timings: '11:00am - 4:00pm' },
-  { sno: 10, doctorName: 'Dr. Mohit Tummala', department: 'Orthopaedics', floor: '2nd', roomNo: '205', timings: '11:00am - 4:00pm' },
-  { sno: 11, doctorName: 'Dr. Pratap Pravathaneni', department: 'Orthopaedics', floor: '2nd', roomNo: '206', timings: '11:00am - 4:00pm' },
-  { sno: 12, doctorName: 'Dr. Lakshman', department: 'Orthopaedics', floor: '2nd', roomNo: '207', timings: '11:00am - 4:00pm' },
-  { sno: 13, doctorName: 'Dr. Sai Lakshman Anne', department: 'Orthopaedics', floor: '2nd', roomNo: '208', timings: '11:00am - 4:00pm' },
-  { sno: 14, doctorName: 'Dr. Nithin Kumar', department: 'Orthopaedics', floor: '2nd', roomNo: '221', timings: '11:00am - 4:00pm' },
-  { sno: 15, doctorName: 'Dr. Vamshi Krishna', department: 'Orthopaedics', floor: '2nd', roomNo: '219', timings: '11:00am - 4:00pm' },
+
+
+
+
+
+
+
+
+
+  // { sno: 1, doctorName: 'Dr. Phani Raj', department: 'Neurosurgery', floor: '2nd', roomNo: '201', timings: '10:30am - 3:00pm' },
+  // { sno: 2, doctorName: 'Dr. Savitri Sastri B V', department: 'Neurosurgery', floor: '2nd', roomNo: '202', timings: '9:30am - 3:00pm' },
+  // { sno: 3, doctorName: 'Dr. Dheeraj Rai', department: 'Neurology', floor: '2nd', roomNo: '210', timings: '9:30am - 4:00pm' },
+  // { sno: 4, doctorName: 'Dr. Abhinay M Hoche', department: 'Neurology', floor: '2nd', roomNo: '212', timings: '10:00am - 4:00pm' },
+  // { sno: 5, doctorName: 'Dr. Manoj Vasireddy', department: 'Neurology', floor: '2nd', roomNo: '216', timings: '9:30am - 4:00pm' },
+  // { sno: 6, doctorName: 'Dr. Surya Teja', department: 'Neurology', floor: '2nd', roomNo: '215', timings: '10:00am - 4:00pm' },
+  // { sno: 7, doctorName: 'Dr. Spoorthy Kothepalli', department: 'Rheumatology', floor: '2nd', roomNo: '218', timings: '11:00am - 4:00pm' },
+  // { sno: 8, doctorName: 'Dr. Harsha Vikram', department: 'Orthopaedics', floor: '2nd', roomNo: '203', timings: '11:00am - 4:00pm' },
+  // { sno: 9, doctorName: 'Dr. Sri Krishna Chaitanya', department: 'Orthopaedics', floor: '2nd', roomNo: '204', timings: '11:00am - 4:00pm' },
+  // { sno: 10, doctorName: 'Dr. Mohit Tummala', department: 'Orthopaedics', floor: '2nd', roomNo: '205', timings: '11:00am - 4:00pm' },
+  // { sno: 11, doctorName: 'Dr. Pratap Pravathaneni', department: 'Orthopaedics', floor: '2nd', roomNo: '206', timings: '11:00am - 4:00pm' },
+  // { sno: 12, doctorName: 'Dr. Lakshman', department: 'Orthopaedics', floor: '2nd', roomNo: '207', timings: '11:00am - 4:00pm' },
+  // { sno: 13, doctorName: 'Dr. Sai Lakshman Anne', department: 'Orthopaedics', floor: '2nd', roomNo: '208', timings: '11:00am - 4:00pm' },
+  // { sno: 14, doctorName: 'Dr. Nithin Kumar', department: 'Orthopaedics', floor: '2nd', roomNo: '221', timings: '11:00am - 4:00pm' },
+  // { sno: 15, doctorName: 'Dr. Vamshi Krishna', department: 'Orthopaedics', floor: '2nd', roomNo: '219', timings: '11:00am - 4:00pm' },
+
+
+  
+  { sno: 1,  doctorName: 'Dr. Phani Raj',              department: 'Neurosurgery', floor: '2nd', roomNo: '201', timings: '10:30am - 3:00pm' },
+  { sno: 2,  doctorName: 'Dr. Savitri Sastri B V',     department: 'Neurosurgery', floor: '2nd', roomNo: '202', timings: '9:30am - 3:00pm' },
+  { sno: 3,  doctorName: 'Dr. Harsha Vikram',           department: 'Orthopaedics', floor: '2nd', roomNo: '203', timings: '11:00am - 4:00pm' },
+  { sno: 4,  doctorName: 'Dr. Sri Krishna Chaitanya',   department: 'Orthopaedics', floor: '2nd', roomNo: '204', timings: '11:00am - 4:00pm' },
+  { sno: 5,  doctorName: 'Dr. Mohit Tummala',           department: 'Orthopaedics', floor: '2nd', roomNo: '205', timings: '11:00am - 4:00pm' },
+  { sno: 6,  doctorName: 'Dr. Pratap Pravathaneni',     department: 'Orthopaedics', floor: '2nd', roomNo: '206', timings: '11:00am - 4:00pm' },
+  { sno: 7,  doctorName: 'Dr. Lakshman',                department: 'Orthopaedics', floor: '2nd', roomNo: '207', timings: '11:00am - 4:00pm' },
+  { sno: 8,  doctorName: 'Dr. Sai Lakshman Anne',       department: 'Orthopaedics', floor: '2nd', roomNo: '208', timings: '11:00am - 4:00pm' },
+ {sno: 9,    doctorName: '',                            department: 'ENGM',floor: '2nd',roomNo: '209',timings: '',roomType: 'label',label: 'ENGM'},
+ { sno: 10,  doctorName: 'Dr. Dheeraj Rai',             department: 'Neurology',    floor: '2nd', roomNo: '210', timings: '9:30am - 4:00pm' },
+ {sno:11,    doctorName: '', department: 'EEG',floor: '2nd',roomNo: '2011',timings: '',roomType: 'label',label: 'EEG'},
+  { sno: 12, doctorName: 'Dr. Abhinay M Hoche',         department: 'Neurology',    floor: '2nd', roomNo: '212', timings: '10:00am - 4:00pm' },
+  { sno: 13, doctorName: 'Dr. Surya Teja',              department: 'Neurology',    floor: '2nd', roomNo: '215', timings: '10:00am - 4:00pm' },
+  { sno: 14, doctorName: 'Dr. Manoj Vasireddy',         department: 'Neurology',    floor: '2nd', roomNo: '216', timings: '9:30am - 4:00pm' },
+  { sno: 15, doctorName: 'Dr. Spoorthy Kothepalli',     department: 'Rheumatology', floor: '2nd', roomNo: '218', timings: '11:00am - 4:00pm' },
+  { sno: 16, doctorName: 'Dr. Vamshi Krishna',          department: 'Orthopaedics', floor: '2nd', roomNo: '219', timings: '11:00am - 4:00pm' },
+  { sno: 17, doctorName: 'Dr. Nithin Kumar',            department: 'Orthopaedics', floor: '2nd', roomNo: '221', timings: '11:00am - 4:00pm' },
+
+
 
   { sno: 1, doctorName: 'Dr. Ravi Kumar Alluri', department: 'Cardiology (Interventional)', floor: '3rd', roomNo: '317', timings: '8:00am' },
   { sno: 2, doctorName: 'Dr. Shyam Sundar Reddy P', department: 'Cardiology (Interventional)', floor: '3rd', roomNo: '316', timings: '8:00am' },
@@ -90,6 +121,12 @@ export const DOCTORS: Doctor[] = [
   { sno: 41, doctorName: 'Arun Kumar', department: 'Dental', floor: '3rd', roomNo: '', timings: '10:00am - 6:00pm' },
   { sno: 42, doctorName: 'Avinash M', department: 'Dental (Consultant)', floor: '3rd', roomNo: '', timings: '10:00am - 6:00pm' },
   { sno: 43, doctorName: 'Dr. Chaitanya P', department: 'Dental (Consultant)', floor: '3rd', roomNo: '361 & 362 - 368', timings: '10:00am - 6:00pm' },
+
+
+
+
+
+
 
   { sno: 1, doctorName: 'Dr. Srivenu Itha', department: 'Medical Gastroenterology', floor: '4th', roomNo: '426', timings: '10:00am - 5:00pm' },
   { sno: 2, doctorName: 'Dr. Uday Kiran M', department: 'Medical Gastroenterology', floor: '4th', roomNo: '425', timings: '10:00am - 5:00pm' },
