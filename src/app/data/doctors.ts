@@ -110,7 +110,7 @@ export const DOCTORS: Doctor[] = [
 
 { sno: 1, doctorName: 'Dr. Phaniraj', department: 'Neurosurgery', floor: '2nd', roomNo: '201', timings: '' },
 { sno: 2, doctorName: 'Dr. Savitri', department: 'Neurosurgery', floor: '2nd', roomNo: '202', timings: '' },
-{ sno: 3, doctorName: 'Harsha Vikram', department: 'Spine Surgeon', floor: '2nd', roomNo: '203', timings: '' },
+{ sno: 3, doctorName: 'Dr. Harsha Vikram', department: 'Spine Surgeon', floor: '2nd', roomNo: '203', timings: '' },
 { sno: 4, doctorName: 'Dr. Krishna Chaitanya', department: 'Spine Surgeon', floor: '2nd', roomNo: '204', timings: '' },
 { sno: 5, doctorName: 'Dr. Mohit Tumala', department: 'Orthopedic Surgeon', floor: '2nd', roomNo: '205', timings: '' },
 { sno: 6, doctorName: 'Dr. Pratap', department: 'Arthroscopy and Sports Medicine Surgeon', floor: '2nd', roomNo: '206', timings: '' },
