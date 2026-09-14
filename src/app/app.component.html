@@ -38,7 +38,11 @@
     </section>
 
     <div class="result-bar">
-      <div><strong>{{ filteredDoctors.length }}</strong> doctor{{ filteredDoctors.length === 1 ? '' : 's' }} found</div>
+      <!-- <div><strong>{{ filteredDoctors.length }}</strong> doctor{{ filteredDoctors.length === 1 ? '' : 's' }} found</div> -->
+       <div>
+  <strong>{{ doctorCount }}</strong>
+  doctor{{ doctorCount === 1 ? '' : 's' }} found
+</div>
       <div class="hint">Search is applied to all details</div>
     </div>
 
@@ -110,7 +114,8 @@
       <ng-container *ngIf="doctor.roomType !== 'empty'; else emptyRoom">
 
         <div class="card-top">
-          <div class="avatar">Dr</div>
+          <!-- <div class="avatar">Dr</div> -->
+        <div class="avatar">{{ doctor.doctorName.toLowerCase().startsWith('dr') ? 'Dr' : ' ' }}</div>
 
           <div class="doctor-title">
             <h2>{{ doctor.doctorName }}</h2>
