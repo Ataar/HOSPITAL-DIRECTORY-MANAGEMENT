@@ -4,13 +4,8 @@
    GLOBAL
 ========================================= */
 
-* {
-  box-sizing: border-box;
-}
-:host {
-  display: block;
-  min-height: 100vh;
-}
+
+
 
 
 img {
@@ -107,11 +102,11 @@ h1 {
 
 .subtitle {
   margin: 10px 0 0;
-
   font-size: clamp(13px, 1.5vw, 16px);
   line-height: 1.5;
-
   opacity: 0.88;
+  text-transform: capitalize;
+
 }
 
 
@@ -361,7 +356,8 @@ select,
 .doctor-title {
   min-width: 0;
   flex: 1;
-  color: white;
+  color: rgb(245, 245, 243);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .doctor-title h2 {
@@ -375,13 +371,16 @@ select,
 }
 
 .department {
-  color: #087f8c;
 
-  font-size: 13px;
+  font-size: 18px;
 
   font-weight: 700;
 
   overflow-wrap: anywhere;
+
+  font-family: Calibri;
+
+  color: #07def5;
 }
 
 
@@ -705,7 +704,7 @@ select,
   }
 
   .department {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .value {
@@ -767,6 +766,213 @@ select,
     margin-top: -45px;
   }
 }
+
+
+
+
+
+
+
+/* =========================================
+   PROFESSIONAL HOSPITAL FOOTER
+========================================= */
+
+.footer {
+  width: 100%;
+  margin-top: 56px;
+  background: #123b67;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Main Footer Content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* Footer Item */
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icon Circle */
+.footer-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Text Area */
+.footer-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Email / Telephone */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Vertical Divider */
+.footer-divider {
+  width: 1px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-bottom {
+  width: 100%;
+  padding: 13px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  letter-spacing: 0.2px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .footer-content {
+    gap: 40px;
+    padding: 26px 20px;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    padding: 25px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .footer-item {
+    width: 100%;
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  .footer-label {
+    font-size: 10px;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 12px 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 375px) {
+
+  .footer-content {
+    padding: 22px 15px;
+  }
+
+  .footer-item {
+    gap: 12px;
+  }
+
+  .footer a {
+    font-size: 13px;
+  }
+}
+
+
 
 
 

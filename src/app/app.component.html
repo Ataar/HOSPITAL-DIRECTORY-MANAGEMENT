@@ -6,7 +6,7 @@
       <div>
         <p class="eyebrow">HOSPITAL DIRECTORY</p>
         <h1>Doctor & Department Search</h1>
-        <p class="subtitle">Find doctors by name, department, floor or room number.</p>
+        <p class="subtitle">Find doctors by name, department, floor, or room.</p>
       </div>
     </div>
   </header>
@@ -18,7 +18,7 @@
         <input
           type="text"
           [(ngModel)]="searchText"
-          placeholder="Search doctor, department, floor, room no..."
+          placeholder="Quick Search..."
           aria-label="Search doctors"
         />
         <button *ngIf="searchText" type="button" class="clear-btn" (click)="clearSearch()">×</button>
@@ -187,3 +187,46 @@
     </ng-template>
   </main>
 </div>
+
+ <!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <!-- EMAIL -->
+    <div class="footer-item">
+      <span class="footer-icon">✉</span>
+
+      <div>
+        <span class="footer-label">Email</span>
+
+        <a href="mailto:mateenataar07@gmail.com">
+          mateenataar07&#64;gmail.com
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- MOBILE -->
+    <div class="footer-item">
+      <span class="footer-icon">☎</span>
+
+      <div>
+        <span class="footer-label">Mobile</span>
+
+        <a href="tel:+917058804143">
+          7058804143
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© KIMS Hospitals. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
